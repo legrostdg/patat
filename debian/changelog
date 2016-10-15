@@ -1,5 +1,5 @@
-haskell-patat (0.2.0.0-1) UNRELEASED; urgency=low
+patat (0.2.0.0-1) unstable; urgency=medium
 
-  * Initial release
+  * Initial release (Closes: #840738)
 
- -- Debian Haskell Group <pkg-haskell-maintainers@lists.alioth.debian.org>  Sat, 15 Oct 2016 17:35:05 +0200
+ -- Félix Sipma <felix+debian@gueux.org>  Sat, 15 Oct 2016 17:35:05 +0200
