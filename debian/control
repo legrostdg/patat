@@ -1,5 +1,5 @@
-Source: haskell-patat
-Maintainer: Debian Haskell Group <pkg-haskell-maintainers@lists.alioth.debian.org>
+Source: patat
+Maintainer: Félix Sipma <felix+debian@gueux.org>
 Priority: extra
 Section: haskell
 Build-Depends: debhelper (>= 10),
@@ -30,7 +30,7 @@ Homepage: http://github.com/jaspervdj/patat
 X-Description: Terminal-based presentations using Pandoc
  Terminal-based presentations using Pandoc
 
-Package: haskell-patat-utils
+Package: patat
 Architecture: any
 Section: misc
 Depends: ${haskell:Depends},
