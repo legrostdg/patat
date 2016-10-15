@@ -4,11 +4,11 @@ Upstream-Contact: Jasper Van der Jeugt <m@jaspervdj.be>
 Source: https://hackage.haskell.org/package/patat
 
 Files: *
-Copyright: 2016 Jasper Van der Jeugt
+Copyright: 2016 Jasper Van der Jeugt <m@jaspervdj.be>
 License: GPL
 
 Files: debian/*
-Copyright: held by the contributors mentioned in debian/changelog
+Copyright: 2016 Félix Sipma <felix+debian@gueux.org>
 License: GPL
 
 License: GPL
