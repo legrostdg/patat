@@ -1,0 +1,2 @@
+# standard override for Haskell binary packages
+binary-or-shlib-defines-rpath
