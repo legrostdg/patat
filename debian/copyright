@@ -5,13 +5,13 @@ Source: https://hackage.haskell.org/package/patat
 
 Files: *
 Copyright: 2016 Jasper Van der Jeugt <m@jaspervdj.be>
-License: GPL
+License: GPL-2
 
 Files: debian/*
 Copyright: 2016 Félix Sipma <felix+debian@gueux.org>
-License: GPL
+License: GPL-2
 
-License: GPL
+License: GPL-2
               GNU GENERAL PUBLIC LICENSE
                  Version 2, June 1991
  .
