@@ -35,6 +35,7 @@ Architecture: any
 Section: misc
 Depends: ${haskell:Depends},
  ${misc:Depends},
-Description: patat (*P*resentations *A*top *T*he *A*NSI *T*erminal) is a small
- tool that allows you to show presentations using only an ANSI terminal.  It
- does not require `ncurses`.
+Description: Terminal-based presentations using Pandoc
+ patat (*P*resentations *A*top *T*he *A*NSI *T*erminal) is a small tool that
+ allows you to show presentations using only an ANSI terminal.  It does not
+ require `ncurses`.
