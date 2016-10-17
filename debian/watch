@@ -1,4 +1,4 @@
 version=3
 
-opts="filenamemangle=s/.+\/v?(\d\S*)\.tar\.gz/patat-$1\.tar\.gz/,pgpsigurlmangle=s#^(https://github.com/jaspervdj/patat)/archive/(.*)\.tar\.gz#$1/releases/download/$2/$2.tar.gz.asc#" \
+opts="filenamemangle=s/.+\/v?(\d\S*)\.tar\.gz/patat-$1\.tar\.gz/ \
   https://github.com/jaspervdj/patat/tags .*/v?(\d\S*)\.tar\.gz
