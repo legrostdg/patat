@@ -1,16 +1,16 @@
 From: =?utf-8?q?F=C3=A9lix_Sipma?= <felix.sipma@no-log.org>
-Date: Tue, 18 Oct 2016 16:33:42 +0200
-Subject: Debianize README.md
+Date: Tue, 18 Oct 2016 18:52:55 +0200
+Subject: update README.md patch
 
 ---
- README.md | 36 ------------------------------------
- 1 file changed, 36 deletions(-)
+ README.md | 34 ----------------------------------
+ 1 file changed, 34 deletions(-)
 
 diff --git a/README.md b/README.md
-index 13c605b..486d06c 100644
+index 167f56c..d0c9b7f 100644
 --- a/README.md
 +++ b/README.md
-@@ -1,14 +1,10 @@
+@@ -1,8 +1,6 @@
  patat
  =====
  
@@ -19,13 +19,7 @@ index 13c605b..486d06c 100644
  `patat` (**P**resentations **A**top **T**he **A**NSI **T**erminal) is a small
  tool that allows you to show presentations using only an ANSI terminal.  It does
  not require `ncurses`.
- 
--![screenshot](extra/screenshot.png?raw=true)
--
- `patat` is written in [Haskell] and built upon the great [Pandoc] library.  This
- means it is theoretically not limited to Markdown, but can support every
- input format that Pandoc supports.
-@@ -19,44 +15,12 @@ input format that Pandoc supports.
+@@ -29,9 +27,6 @@ Features:
  Table of Contents
  -----------------
  
@@ -35,7 +29,8 @@ index 13c605b..486d06c 100644
  -   [Running](#running)
  -   [Input format](#input-format)
  -   [Configuration](#configuration)
-     -   [Theming](#theming)
+@@ -39,35 +34,6 @@ Table of Contents
+     -   [Syntax Highlighting](#syntax-highlighting)
  -   [Trivia](#trivia)
  
 -Installation
