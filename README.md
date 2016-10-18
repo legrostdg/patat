@@ -7,12 +7,22 @@ patat
 tool that allows you to show presentations using only an ANSI terminal.  It does
 not require `ncurses`.
 
+Features:
+
+- Leverages the great [Pandoc] library to support many input formats including
+  [Literate Haskell].
+- Supports [smart slide splitting](#input-format).
+- There is a [live reload](#running) mode.
+- [Theming](#theming) support.
+- Optionally [re-wrapping](#configuration) text to terminal width with proper
+  indentation.
+- Syntax highlighting for nearly one hundred languages generated from [Kate]
+  syntax files.
+- Written in [Haskell].
+
 ![screenshot](extra/screenshot.png?raw=true)
 
-`patat` is written in [Haskell] and built upon the great [Pandoc] library.  This
-means it is theoretically not limited to Markdown, but can support every
-input format that Pandoc supports.
-
+[Kate]: https://kate-editor.org/
 [Haskell]: http://haskell.org/
 [Pandoc]: http://pandoc.org/
 
@@ -26,6 +36,7 @@ Table of Contents
 -   [Input format](#input-format)
 -   [Configuration](#configuration)
     -   [Theming](#theming)
+    -   [Syntax Highlighting](#syntax-highlighting)
 -   [Trivia](#trivia)
 
 Installation
@@ -240,6 +251,26 @@ The accepted styles are:
 - `vividRed`
 - `vividWhite`
 - `vividYellow`
+
+### Syntax Highlighting
+
+As part of theming, syntax highlighting is also configurable.  This can be
+configured like this:
+
+    ---
+    patat:
+      theme:
+        syntaxHighlighting:
+          decVal: [bold, onDullRed]
+    ...
+
+    ...
+
+`decVal` refers to "decimal values".  This is known as a "token type".  For a
+full list of token types, see [this list] -- the names are derived from there in
+an obvious way.
+
+[this list]: https://hackage.haskell.org/package/highlighting-kate-0.6.3/docs/Text-Highlighting-Kate-Types.html#t:TokenType
 
 Trivia
 ------
