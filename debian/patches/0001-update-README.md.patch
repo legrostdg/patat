@@ -1,20 +1,20 @@
 From: =?utf-8?q?F=C3=A9lix_Sipma?= <felix.sipma@no-log.org>
-Date: Tue, 18 Oct 2016 18:52:55 +0200
-Subject: update README.md patch
+Date: Thu, 20 Oct 2016 15:09:42 +0200
+Subject: update README.md
 
 ---
  README.md | 34 ----------------------------------
  1 file changed, 34 deletions(-)
 
 diff --git a/README.md b/README.md
-index 167f56c..d0c9b7f 100644
+index 3cd2820..d0c9b7f 100644
 --- a/README.md
 +++ b/README.md
 @@ -1,8 +1,6 @@
  patat
  =====
  
--[![Build Status](https://travis-ci.org/jaspervdj/patat.svg?branch=master)](https://travis-ci.org/jaspervdj/patat)
+-[![Build Status](https://img.shields.io/travis/jaspervdj/patat.svg)](https://travis-ci.org/jaspervdj/patat) [![Hackage](https://img.shields.io/hackage/v/patat.svg)](https://hackage.haskell.org/package/patat) [![GitHub tag](https://img.shields.io/github/tag/jaspervdj/patat.svg)]()
 -
  `patat` (**P**resentations **A**top **T**he **A**NSI **T**erminal) is a small
  tool that allows you to show presentations using only an ANSI terminal.  It does
