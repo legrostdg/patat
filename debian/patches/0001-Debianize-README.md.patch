@@ -1,7 +1,8 @@
 From: =?utf-8?q?F=C3=A9lix_Sipma?= <felix.sipma@no-log.org>
 Date: Thu, 20 Oct 2016 15:09:42 +0200
-Subject: update README.md
+Subject: Debianize README.md
 
+Remove installation instructions and CI links
 ---
  README.md | 34 ----------------------------------
  1 file changed, 34 deletions(-)
