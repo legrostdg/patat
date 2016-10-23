@@ -1,2 +1,4 @@
 # standard override for Haskell binary packages
 binary-or-shlib-defines-rpath
+# "patat" is the name of the binary
+spelling-error-in-binary
