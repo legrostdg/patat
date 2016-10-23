@@ -7,8 +7,7 @@
 
 override_dh_auto_configure:
 	ghc --make Setup
-	./Setup configure \
-		--enable-tests
+	./Setup configure
 
 override_dh_auto_build:
 	./Setup build
@@ -18,7 +17,7 @@ override_dh_auto_clean:
 	rm -f Setup Setup.o Setup.hi
 
 override_dh_auto_test:
-	./Setup test
+	PATH="$(PATH):dist/build/patat/" bash test.sh
 
 override_dh_compress:
 	# add file that dh_compress somehow misses
