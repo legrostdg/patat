@@ -7,3 +7,8 @@ include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/class/hlibrary.mk
 
 build/patat:: build-ghc-stamp
+
+override_dh_strip:
+	# GHC cannot produce debugging symbols so the -dbgsym package
+	# ends up empty, so disable generating it
+	dh_strip --no-automatic-dbgsym
