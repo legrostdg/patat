@@ -1,12 +1,28 @@
 #!/usr/bin/make -f
 
-DEB_CABAL_PACKAGE = patat
-DEB_DEFAULT_COMPILER = ghc
+# these rules originally written by Joey Hess for hothasktags package
 
-include /usr/share/cdbs/1/rules/debhelper.mk
-include /usr/share/cdbs/1/class/hlibrary.mk
+%:
+	dh $@
 
-build/patat:: build-ghc-stamp
+override_dh_auto_configure:
+	ghc --make Setup
+	./Setup configure \
+		--enable-tests
+
+override_dh_auto_build:
+	./Setup build
+
+override_dh_auto_clean:
+	if [ -x Setup ]; then ./Setup clean; fi
+	rm -f Setup Setup.o Setup.hi
+
+override_dh_auto_test:
+	./Setup test
+
+override_dh_compress:
+	# add file that dh_compress somehow misses
+	dh_compress debian/patat/usr/share/doc/patat/README.md
 
 override_dh_strip:
 	# GHC cannot produce debugging symbols so the -dbgsym package
