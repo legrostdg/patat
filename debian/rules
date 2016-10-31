@@ -20,10 +20,6 @@ override_dh_auto_clean:
 override_dh_auto_test:
 	PATH="$(PATH):dist/build/patat/" bash test.sh
 
-override_dh_compress:
-	# add file that dh_compress somehow misses
-	dh_compress debian/patat/usr/share/doc/patat/README.md
-
 override_dh_strip:
 	# GHC cannot produce debugging symbols so the -dbgsym package
 	# ends up empty, so disable generating it
