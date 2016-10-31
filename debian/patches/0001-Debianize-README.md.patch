@@ -4,6 +4,8 @@ Subject: Debianize README.md
 
 - remove installation instructions and CI links
 - modify link to screenshot file
+
+Forwarded: not-needed
 ---
  README.md | 36 +-----------------------------------
  1 file changed, 1 insertion(+), 35 deletions(-)
