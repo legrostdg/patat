@@ -1,3 +1,10 @@
+patat (0.4.0.0-1) unstable; urgency=medium
+
+  * New upstream version 0.4.0.0
+  * rebase Debian patch
+
+ -- Félix Sipma <felix+debian@gueux.org>  Tue, 15 Nov 2016 15:27:42 +0100
+
 patat (0.3.3.0-1) unstable; urgency=medium
 
   * Initial release (Closes: #840738)
