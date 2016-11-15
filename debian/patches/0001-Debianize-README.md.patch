@@ -4,14 +4,12 @@ Subject: Debianize README.md
 
 - remove installation instructions and CI links
 - modify link to screenshot file
-
-Forwarded: not-needed
 ---
  README.md | 36 +-----------------------------------
  1 file changed, 1 insertion(+), 35 deletions(-)
 
 diff --git a/README.md b/README.md
-index 3cd2820..3dfcdf6 100644
+index d5c4e11..ebeafa4 100644
 --- a/README.md
 +++ b/README.md
 @@ -1,8 +1,6 @@
@@ -23,7 +21,7 @@ index 3cd2820..3dfcdf6 100644
  `patat` (**P**resentations **A**top **T**he **A**NSI **T**erminal) is a small
  tool that allows you to show presentations using only an ANSI terminal.  It does
  not require `ncurses`.
-@@ -20,7 +18,7 @@ Features:
+@@ -22,7 +20,7 @@ Features:
    syntax files.
  - Written in [Haskell].
  
@@ -32,7 +30,7 @@ index 3cd2820..3dfcdf6 100644
  
  [Kate]: https://kate-editor.org/
  [Haskell]: http://haskell.org/
-@@ -29,9 +27,6 @@ Features:
+@@ -31,9 +29,6 @@ Features:
  Table of Contents
  -----------------
  
@@ -42,7 +40,7 @@ index 3cd2820..3dfcdf6 100644
  -   [Running](#running)
  -   [Input format](#input-format)
  -   [Configuration](#configuration)
-@@ -39,35 +34,6 @@ Table of Contents
+@@ -43,35 +38,6 @@ Table of Contents
      -   [Syntax Highlighting](#syntax-highlighting)
  -   [Trivia](#trivia)
  
