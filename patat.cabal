@@ -1,5 +1,5 @@
 Name:                patat
-Version:             0.3.3.0
+Version:             0.4.0.0
 Synopsis:            Terminal-based presentations using Pandoc
 Description:         Terminal-based presentations using Pandoc
 License:             GPL-2
@@ -45,10 +45,12 @@ Executable patat
     Data.Aeson.Extended
     Data.Aeson.TH.Extended
     Data.Data.Extended
+    Patat.AutoAdvance
     Patat.Presentation
     Patat.Presentation.Display
     Patat.Presentation.Display.CodeBlock
     Patat.Presentation.Display.Table
+    Patat.Presentation.Fragment
     Patat.Presentation.Interactive
     Patat.Presentation.Internal
     Patat.Presentation.Read

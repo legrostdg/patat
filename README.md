@@ -12,8 +12,10 @@ Features:
 - Leverages the great [Pandoc] library to support many input formats including
   [Literate Haskell].
 - Supports [smart slide splitting](#input-format).
+- Slides can be split up into [multiple fragments](#fragmented-slides)
 - There is a [live reload](#running) mode.
 - [Theming](#theming) support.
+- [Auto advancing](#auto-advancing) with configurable delay.
 - Optionally [re-wrapping](#configuration) text to terminal width with proper
   indentation.
 - Syntax highlighting for nearly one hundred languages generated from [Kate]
@@ -35,6 +37,8 @@ Table of Contents
 -   [Running](#running)
 -   [Input format](#input-format)
 -   [Configuration](#configuration)
+    -   [Auto advancing](#auto-advancing)
+    -   [Fragmented slides](#fragmented-slides)
     -   [Theming](#theming)
     -   [Syntax Highlighting](#syntax-highlighting)
 -   [Trivia](#trivia)
@@ -171,6 +175,83 @@ Or we can use a normal presentation and have the following `$HOME/.patat.yaml`:
 
     wrap: true
 
+### Auto advancing
+
+By setting `autoAdvanceDelay` to a number of seconds, `patat` will automatically
+advance to the next slide.
+
+    ---
+    title: Auto-advance, yes please
+    author: John Doe
+    patat:
+        autoAdvanceDelay: 2
+    ...
+
+    Hello World!
+
+    ---
+
+    This slide will be shown two seconds after the presentation starts.
+
+### Fragmented slides
+
+By default, slides are always displayed "all at once".  If you want to display
+them fragment by fragment, there are two ways to do that.  The most common
+case is that lists should be displayed incrementally.
+
+This can be configured by settings `incrementalLists` to `true` in the metadata
+block:
+
+    ---
+    title: Presentation with incremental lists
+    author: John Doe
+    patat:
+        incrementalLists: true
+    ...
+
+    - This list
+    - is displayed
+    - item by item
+
+Setting `incrementalLists` works on _all_ lists in the presentation.  To flip
+the setting for a specific list, wrap it in a block quote.  This will make the
+list incremental if `incrementalLists` is not set, and it will display the list
+all at once if `incrementalLists` is set to `true`.
+
+This example contains a sublist which is also displayed incrementally, and then
+a sublist which is displayed all at once (by merit of the block quote).
+
+    ---
+    title: Presentation with incremental lists
+    author: John Doe
+    patat:
+        incrementalLists: true
+    ...
+
+    - This list
+    - is displayed
+
+        * item
+        * by item
+
+    - Or sometimes
+
+        > * all at
+        > * once
+
+Another way to break up slides is to use a pagraph only containing three dots
+separated by spaces.  For example, this slide has two pauses:
+
+    Legen
+
+    . . .
+
+    wait for it
+
+    . . .
+
+    Dary!
+
 ### Theming
 
 Colors and other properties can also be changed using this configuration.  For
@@ -194,26 +275,26 @@ example, we can have:
 
 The properties that can be given a list of styles are:
 
-- `borders`
-- `header`
-- `codeBlock`
-- `bulletList`
-- `orderedList`
 - `blockQuote`
-- `definitionTerm`
+- `borders`
+- `bulletList`
+- `codeBlock`
+- `code`
 - `definitionList`
+- `definitionTerm`
+- `emph`
+- `header`
+- `imageTarget`
+- `imageText`
+- `linkTarget`
+- `linkText`
+- `math`
+- `orderedList`
+- `quoted`
+- `strikeout`
+- `strong`
 - `tableHeader`
 - `tableSeparator`
-- `emph`
-- `strong`
-- `code`
-- `linkText`
-- `linkTarget`
-- `strikeout`
-- `quoted`
-- `math`
-- `imageText`
-- `imageTarget`
 
 The accepted styles are:
 
