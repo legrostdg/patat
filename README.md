@@ -16,7 +16,7 @@ Features:
 - There is a [live reload](#running) mode.
 - [Theming](#theming) support.
 - [Auto advancing](#auto-advancing) with configurable delay.
-- Optionally [re-wrapping](#configuration) text to terminal width with proper
+- Optionally [re-wrapping](#line-wrapping) text to terminal width with proper
   indentation.
 - Syntax highlighting for nearly one hundred languages generated from [Kate]
   syntax files.
@@ -31,12 +31,16 @@ Features:
 Table of Contents
 -----------------
 
+-   [Table of Contents](#table-of-contents)
 -   [Installation](#installation)
-    -   [Using stack](#using-stack)
-    -   [Using cabal](#using-cabal)
+    -   [Pre-built-packages](#pre-built-packages)
+    -   [From source](#from-source)
 -   [Running](#running)
+-   [Options](#options)
+-   [Controls](#controls)
 -   [Input format](#input-format)
 -   [Configuration](#configuration)
+    -   [Line wrapping](#line-wrapping)
     -   [Auto advancing](#auto-advancing)
     -   [Fragmented slides](#fragmented-slides)
     -   [Theming](#theming)
@@ -46,15 +50,23 @@ Table of Contents
 Installation
 ------------
 
-You can build from source using `stack install` or `cabal install`.  `patat` is
-also available from [Hackage].
+### Pre-built-packages
+
+There is a pre-built package available for Debian:
+
+- <https://packages.debian.org/unstable/patat>
+
+### From source
+
+Installation from source is very easy.  You can build from source using `stack
+install` or `cabal install`.  `patat` is also available from [Hackage].
 
 [Hackage]: https://hackage.haskell.org/package/patat
 
 For people unfamiliar with the Haskell ecosystem, this means you can do either
 of the following:
 
-### Using stack
+#### Using stack
 
 1. Install [stack] for your platform.
 2. Clone this repository.
@@ -64,7 +76,7 @@ of the following:
 
 [stack]: https://docs.haskellstack.org/en/stable/README/
 
-### Using cabal
+#### Using cabal
 
 1. Install [cabal] for your platform.
 2. Run `cabal install patat`.
@@ -75,9 +87,32 @@ of the following:
 Running
 -------
 
-    patat [--watch] presentation.md
+`patat [*options*] file`
 
-Controls:
+Options
+-------
+
+`-w`, `--watch`
+
+:   If you provide the `--watch` flag, `patat` will watch the presentation file
+    for changes and reload automatically.  This is very useful when you are
+    writing the presentation.
+
+`-f`, `--force`
+
+:   Run the presentation even if the terminal claims it does not support ANSI
+    features.
+
+`-d`, `--dump`
+
+:   Just dump all the slides to stdout.  This is useful for debugging.
+
+`--version`
+
+:   Display version information.
+
+Controls
+--------
 
 - **Next slide**: `space`, `enter`, `l`, `→`
 - **Previous slide**: `backspace`, `h`, `←`
@@ -91,10 +126,6 @@ Controls:
 The `r` key is very useful since it allows you to preview your slides while you
 are writing them.  You can also use this to fix artifacts when the terminal is
 resized.
-
-If you provide the `--watch` flag, `patat` will watch the presentation file for
-changes and reload automatically.  This is very useful when you are writing the
-presentation.
 
 Input format
 ------------
@@ -158,22 +189,25 @@ are two places where you can put your configuration:
 [YAML]: http://yaml.org/
 [Pandoc metadata header]: http://pandoc.org/MANUAL.html#extension-yaml_metadata_block
 
-For example, we can turn on line wrapping by using the following file:
+For example, we set an option `key` to `val` by using the following file:
 
     ---
-    title: Presentation with wrapping
+    title: Presentation with options
     author: John Doe
     patat:
-        wrap: true
+        key: val
     ...
 
-    This is a split
-    line which should
-    be re-wrapped.
+    Hello world.
 
 Or we can use a normal presentation and have the following `$HOME/.patat.yaml`:
 
-    wrap: true
+    key: val
+
+### Line wrapping
+
+Line wrapping can be enabled by setting `wrap: true` in the configuration.  This
+will re-wrap all lines to fit the terminal width better.
 
 ### Auto advancing
 
@@ -275,63 +309,20 @@ example, we can have:
 
 The properties that can be given a list of styles are:
 
-- `blockQuote`
-- `borders`
-- `bulletList`
-- `codeBlock`
-- `code`
-- `definitionList`
-- `definitionTerm`
-- `emph`
-- `header`
-- `imageTarget`
-- `imageText`
-- `linkTarget`
-- `linkText`
-- `math`
-- `orderedList`
-- `quoted`
-- `strikeout`
-- `strong`
-- `tableHeader`
-- `tableSeparator`
+`blockQuote`, `borders`, `bulletList`, `codeBlock`, `code`, `definitionList`,
+`definitionTerm`, `emph`, `header`, `imageTarget`, `imageText`, `linkTarget`,
+`linkText`, `math`, `orderedList`, `quoted`, `strikeout`, `strong`,
+`tableHeader`, `tableSeparator`
 
 The accepted styles are:
 
-- `bold`
-- `dullBlack`
-- `dullBlue`
-- `dullCyan`
-- `dullGreen`
-- `dullMagenta`
-- `dullRed`
-- `dullWhite`
-- `dullYellow`
-- `onDullBlack`
-- `onDullBlue`
-- `onDullCyan`
-- `onDullGreen`
-- `onDullMagenta`
-- `onDullRed`
-- `onDullWhite`
-- `onDullYellow`
-- `onVividBlack`
-- `onVividBlue`
-- `onVividCyan`
-- `onVividGreen`
-- `onVividMagenta`
-- `onVividRed`
-- `onVividWhite`
-- `onVividYellow`
-- `underline`
-- `vividBlack`
-- `vividBlue`
-- `vividCyan`
-- `vividGreen`
-- `vividMagenta`
-- `vividRed`
-- `vividWhite`
-- `vividYellow`
+`bold`, `dullBlack`, `dullBlue`, `dullCyan`, `dullGreen`, `dullMagenta`,
+`dullRed`, `dullWhite`, `dullYellow`, `onDullBlack`, `onDullBlue`, `onDullCyan`,
+`onDullGreen`, `onDullMagenta`, `onDullRed`, `onDullWhite`, `onDullYellow`,
+`onVividBlack`, `onVividBlue`, `onVividCyan`, `onVividGreen`, `onVividMagenta`,
+`onVividRed`, `onVividWhite`, `onVividYellow`, `underline`, `vividBlack`,
+`vividBlue`, `vividCyan`, `vividGreen`, `vividMagenta`, `vividRed`,
+`vividWhite`, `vividYellow`
 
 ### Syntax Highlighting
 
