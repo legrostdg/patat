@@ -5,11 +5,11 @@ Subject: Debianize README.md
 - remove installation instructions and CI links
 - modify link to screenshot file
 ---
- README.md | 36 +-----------------------------------
- 1 file changed, 1 insertion(+), 35 deletions(-)
+ README.md | 44 +-------------------------------------------
+ 1 file changed, 1 insertion(+), 43 deletions(-)
 
 diff --git a/README.md b/README.md
-index d5c4e11..ebeafa4 100644
+index 4531335..9127737 100644
 --- a/README.md
 +++ b/README.md
 @@ -1,8 +1,6 @@
@@ -30,32 +30,40 @@ index d5c4e11..ebeafa4 100644
  
  [Kate]: https://kate-editor.org/
  [Haskell]: http://haskell.org/
-@@ -31,9 +29,6 @@ Features:
- Table of Contents
+@@ -32,9 +30,6 @@ Table of Contents
  -----------------
  
+ -   [Table of Contents](#table-of-contents)
 --   [Installation](#installation)
--    -   [Using stack](#using-stack)
--    -   [Using cabal](#using-cabal)
+-    -   [Pre-built-packages](#pre-built-packages)
+-    -   [From source](#from-source)
  -   [Running](#running)
- -   [Input format](#input-format)
- -   [Configuration](#configuration)
-@@ -43,35 +38,6 @@ Table of Contents
+ -   [Options](#options)
+ -   [Controls](#controls)
+@@ -47,43 +42,6 @@ Table of Contents
      -   [Syntax Highlighting](#syntax-highlighting)
  -   [Trivia](#trivia)
  
 -Installation
 -------------
 -
--You can build from source using `stack install` or `cabal install`.  `patat` is
--also available from [Hackage].
+-### Pre-built-packages
+-
+-There is a pre-built package available for Debian:
+-
+-- <https://packages.debian.org/unstable/patat>
+-
+-### From source
+-
+-Installation from source is very easy.  You can build from source using `stack
+-install` or `cabal install`.  `patat` is also available from [Hackage].
 -
 -[Hackage]: https://hackage.haskell.org/package/patat
 -
 -For people unfamiliar with the Haskell ecosystem, this means you can do either
 -of the following:
 -
--### Using stack
+-#### Using stack
 -
 -1. Install [stack] for your platform.
 -2. Clone this repository.
@@ -65,7 +73,7 @@ index d5c4e11..ebeafa4 100644
 -
 -[stack]: https://docs.haskellstack.org/en/stable/README/
 -
--### Using cabal
+-#### Using cabal
 -
 -1. Install [cabal] for your platform.
 -2. Run `cabal install patat`.
