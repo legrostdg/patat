@@ -3,6 +3,7 @@ patat (0.4.2.0-1) UNRELEASED; urgency=medium
   * New upstream version 0.4.2.0
   * generate and use upstream manpage
   * update debian patch to debianize README.md
+  * add git as build dependency (needed for reproducible builds)
 
  -- Félix Sipma <felix.sipma@no-log.org>  Thu, 01 Dec 2016 20:43:29 +0100
 
