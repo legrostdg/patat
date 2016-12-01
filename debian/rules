@@ -10,12 +10,12 @@ override_dh_auto_configure:
 	./Setup configure
 
 override_dh_auto_build:
-	pandoc -sS debian/patat.md -o debian/patat.1
+	make man
 	./Setup build
 
 override_dh_auto_clean:
 	if [ -x Setup ]; then ./Setup clean; fi
-	rm -f Setup Setup.o Setup.hi debian/patat.1
+	rm -f Setup Setup.o Setup.hi extra/patat.1
 
 override_dh_auto_test:
 	PATH="$(PATH):dist/build/patat/" bash test.sh
