@@ -7,6 +7,9 @@ patat (0.4.3.0-1) UNRELEASED; urgency=medium
   * remove pandoc as build dependency
   * New upstream version 0.4.3.0
   * remove git as build dependency
+  * use $(MAKE) instead of make in debian/rules
+  * add pandoc-data to build-depends
+  * use utf8 in extra/make-man.hs
 
  -- Félix Sipma <felix+debian@gueux.org>  Thu, 01 Dec 2016 20:43:29 +0100
 
