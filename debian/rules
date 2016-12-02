@@ -10,7 +10,7 @@ override_dh_auto_configure:
 	./Setup configure
 
 override_dh_auto_build:
-	make man
+	$(MAKE) man
 	./Setup build
 
 override_dh_auto_clean:
