@@ -1,9 +1,9 @@
-patat (0.4.4.0-1) UNRELEASED; urgency=medium
+patat (0.4.4.0-1) unstable; urgency=medium
 
   * New upstream version 0.4.4.0
   * remove patch applied upstream
 
- -- Félix Sipma <felix+debian@gueux.org>  Fri, 02 Dec 2016 15:21:32 +0100
+ -- Félix Sipma <felix+debian@gueux.org>  Fri, 02 Dec 2016 15:39:02 +0100
 
 patat (0.4.3.0-1) unstable; urgency=medium
 
