@@ -1,4 +1,4 @@
-patat (0.4.3.0-1) UNRELEASED; urgency=medium
+patat (0.4.3.0-1) unstable; urgency=medium
 
   * New upstream version 0.4.2.0
   * generate and use upstream manpage
@@ -11,7 +11,7 @@ patat (0.4.3.0-1) UNRELEASED; urgency=medium
   * add pandoc-data to build-depends
   * use utf8 in extra/make-man.hs
 
- -- Félix Sipma <felix+debian@gueux.org>  Thu, 01 Dec 2016 20:43:29 +0100
+ -- Félix Sipma <felix+debian@gueux.org>  Fri, 02 Dec 2016 14:11:58 +0100
 
 patat (0.4.0.0-1) unstable; urgency=medium
 
