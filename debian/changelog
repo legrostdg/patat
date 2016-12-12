@@ -1,3 +1,10 @@
+patat (0.4.5.0-1) unstable; urgency=medium
+
+  * New upstream version 0.4.5.0
+  * remove patch applied upstream
+
+ -- Félix Sipma <felix+debian@gueux.org>  Mon, 12 Dec 2016 19:57:37 +0100
+
 patat (0.4.4.0-2) unstable; urgency=medium
 
   * make build reproducible. Thanks, Daniel Shahaf (Closes: #846832)
