@@ -12,10 +12,14 @@ override_dh_auto_configure:
 override_dh_auto_build:
 	$(MAKE) man
 	./Setup build
+	PATH="$(PATH):dist/build/patat/" $(MAKE) completion
+	mkdir -p bash-completion/completions
+	cp extra/patat.bash-completion bash-completion/completions/patat
 
 override_dh_auto_clean:
+	$(MAKE) clean
 	if [ -x Setup ]; then ./Setup clean; fi
-	rm -f Setup Setup.o Setup.hi extra/patat.1
+	rm -f Setup Setup.o Setup.hi
 
 override_dh_auto_test:
 	PATH="$(PATH):dist/build/patat/" bash test.sh

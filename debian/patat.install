@@ -1,1 +1,2 @@
 dist/build/patat/patat usr/bin
+bash-completion/completions/patat usr/share/bash-completion/completions
