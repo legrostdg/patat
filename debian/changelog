@@ -1,8 +1,10 @@
-patat (0.5.1.1-1) UNRELEASED; urgency=medium
+patat (0.5.1.1-1) experimental; urgency=medium
 
   * New upstream version 0.5.1.1
+  * add bash-completion
+  * update dependencies
 
- -- Félix Sipma <felix+debian@gueux.org>  Mon, 24 Apr 2017 01:16:58 +0200
+ -- Félix Sipma <felix+debian@gueux.org>  Mon, 24 Apr 2017 12:17:18 +0200
 
 patat (0.5.0.0-1) experimental; urgency=medium
 
