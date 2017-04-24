@@ -5,7 +5,7 @@ Section: haskell
 Build-Depends: debhelper (>= 10),
  ghc,
  libghc-aeson-dev (>= 0.9),
- libghc-aeson-dev (<< 1.2),
+ libghc-aeson-dev (<< 1.3),
  libghc-ansi-terminal-dev (>= 0.6),
  libghc-ansi-terminal-dev (<< 0.7),
  libghc-ansi-wl-pprint-dev (>= 0.6),
